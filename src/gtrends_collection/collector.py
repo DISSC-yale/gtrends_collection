@@ -94,7 +94,7 @@ class Collector:
         resolution="week",
         override_terms: Union[List[str], None] = None,
         override_location: Union[List[str], None] = None,
-    ):
+    ) -> DataFrame:
         """
         Processes collection batches from scope.
 
@@ -111,6 +111,9 @@ class Collector:
             # collect across all scope-defined terms and locations in 2024
             data = collector.process_batches("2024-01-01", "2024-12-31")
             ```
+
+        Returns:
+            A `pandas.DataFrame` of the combined results.
         """
 
         params: Dict[str, Union[List[str], str]] = {"timelineResolution": resolution}
@@ -125,11 +128,7 @@ class Collector:
             with open(f"{self.scope_dir}/terms.txt", encoding="utf-8") as content:
                 terms = [term.strip() for term in content.readlines()]
 
-        if override_location:
-            locations = override_location
-        else:
-            with open(f"{self.scope_dir}/locations.txt", encoding="utf-8") as content:
-                locations = [code.strip() for code in content.readlines()]
+        locations = override_location if override_location else self._get_locations()
 
         for term_set in range(0, len(terms), self.max_terms):
             for location in locations:
@@ -150,7 +149,7 @@ class Collector:
         self,
         location: str,
         params: Dict[str, Union[List[str], str]],
-    ):
+    ) -> DataFrame:
         """
         Collect a single batch.
 
@@ -177,6 +176,14 @@ class Collector:
                 },
             )
             ```
+
+        Returns:
+            A `pandas.DataFrame` of the prepared results, with these columns:
+
+                * `value`: Number indicating search volume.
+                * `date`: Date the searches were recorded on.
+                * `location`: Location code in which searches were recorded from.
+                * `term`: The search term.
         """
 
         try:
@@ -195,6 +202,34 @@ class Collector:
             points["term"] = line["term"]
             data.append(points)
         return concat(data)
+
+    def _get_locations(self) -> List[str]:
+        with open(f"{self.scope_dir}/locations.txt", encoding="utf-8") as content:
+            locations = [code.strip() for code in content.readlines()]
+        return locations
+
+    def full_metro_area_codes(self, locations: List[str]) -> List[str]:
+        """
+        Adds country and state codes to metro area codes (e.g., `630` becomes `US-AL-630`),
+        based on `scope_dir/locations.txt`.
+
+        Args:
+            locations (List[str]): Locations to potentially prepend full location codes to.
+
+        Examples:
+            ```python
+            collector.full_metro_area_codes(["630", "522"])
+            ```
+
+        Returns:
+            A version of `locations` with any matching locations expanded.
+        """
+        location_map: Dict[str, str] = {}
+        for location in self._get_locations():
+            if len(location) == 9:
+                location_parts = location.split("-")
+                location_map[location_parts[2]] = location
+        return [location_map.get(loc, loc) for loc in locations]
 
 
 def _location_type(location: str):

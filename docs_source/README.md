@@ -9,15 +9,45 @@ A selection of data are collected in the `data` directory, and are updated weekl
 
 The selection is defined by the files in the `scope` directory.
 
-The `scipts/build_metadata.py` script was used to create `scope/locations.txt`:
+### Local Use
+
+To work with the data locally, you can clone this repository:
 
 ```sh
-python scripts/build_metadata.py
+git clone --depth=1 https://github.com/DISSC-yale/gtrends_collection.git
 ```
 
-## Authentication
+Then load the data in Python:
 
-A developer key is required to access the beta API.
+```python
+from pyarrow.dataset import dataset
+
+data = dataset("gtrends_collection/data").to_table().to_pandas()
+```
+
+or R:
+
+```R
+library(arrow)
+
+data <- open_dataset("gtrends_collection/data") |> dplyr::collect()
+```
+
+### Collection
+
+The `scripts/historical_collection.py` script is used to collect full histories
+based on the scope files:
+
+```sh
+python scripts/historical_collection.py
+```
+
+The `scripts/weekly_collection.py` script is used by the GitHub Actions workflow
+to add new data each week.
+
+#### Authentication
+
+A developer key is required to collect from the beta API.
 
 This can either be set to the `GOOGLE_API_KEY` environment variable,
 or stored in an `.env` file:

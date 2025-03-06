@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="Collector/">
+        <link rel="next" href="Data/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -307,9 +307,29 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Use
+    </span>
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
       Authentication
@@ -317,11 +337,42 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -422,14 +473,44 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Use
+    </span>
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
       Authentication
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -458,14 +539,32 @@ and a minimal framework to organize historical and continuous collection.</p>
 <h2 id="data">Data</h2>
 <p>A selection of data are collected in the <code>data</code> directory, and are updated weekly.</p>
 <p>The selection is defined by the files in the <code>scope</code> directory.</p>
-<p>The <code>scipts/build_metadata.py</code> script was used to create <code>scope/locations.txt</code>:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>scripts/build_metadata.py
+<h3 id="local-use">Local Use</h3>
+<p>To work with the data locally, you can clone this repository:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/DISSC-yale/gtrends_collection.git
 </span></code></pre></div>
-<h2 id="authentication">Authentication</h2>
-<p>A developer key is required to access the beta API.</p>
+<p>Then load the data in Python:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pyarrow.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataset</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">(</span><span class="s2">&quot;gtrends_collection/data&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+</span></code></pre></div>
+<p>or R:</p>
+<div class="language-R highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">arrow</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">open_dataset</span><span class="p">(</span><span class="s">&quot;gtrends_collection/data&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">collect</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="collection">Collection</h3>
+<p>The <code>scripts/historical_collection.py</code> script is used to collect full histories
+based on the scope files:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>scripts/historical_collection.py
+</span></code></pre></div>
+<p>The <code>scripts/weekly_collection.py</code> script is used by the GitHub Actions workflow
+to add new data each week.</p>
+<h4 id="authentication">Authentication</h4>
+<p>A developer key is required to collect from the beta API.</p>
 <p>This can either be set to the <code>GOOGLE_API_KEY</code> environment variable,
 or stored in an <code>.env</code> file:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">GOOGLE_API_KEY</span><span class="o">=</span>AlphanumericKey
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">GOOGLE_API_KEY</span><span class="o">=</span>AlphanumericKey
 </span></code></pre></div>
 
 

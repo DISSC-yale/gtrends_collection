@@ -64,3 +64,8 @@ def test_collector():
     collector = Collector(wait_time=0)
     data = collector.process_batches()
     assert data.columns.to_list() == ["date", "value", "location", "term"]
+
+
+def test_code_conversion():
+    collector = Collector()
+    assert collector.full_metro_area_codes(["630"]) == ["US-AL-630"]

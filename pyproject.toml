@@ -73,6 +73,7 @@ dependencies = [
   "mkdocs",
   "mkdocstrings[python]",
   "mkdocs-material",
+  "tabulate"
 ]
 [tool.hatch.envs.docs.scripts]
 build = "mkdocs build --clean --strict"

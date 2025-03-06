@@ -14,7 +14,7 @@ if __name__ == "__main__":
         .to_pandas()
         .value_counts()
         .sort_values()
-        .index
+        .index.to_list()
     )
 
     collector = Collector()
