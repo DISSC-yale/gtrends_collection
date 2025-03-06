@@ -1,0 +1,2 @@
+from gtrends_collection.collector import Collector
+from gtrends_collection.dataset import write_to_dataset, defragment_dataset

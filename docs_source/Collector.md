@@ -1,0 +1,1 @@
+::: gtrends_collection.Collector
