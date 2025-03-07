@@ -17,6 +17,7 @@ gtrends_schema = pyarrow.schema(
         pyarrow.field("date", pyarrow.string()),
         pyarrow.field("location", pyarrow.string()),
         pyarrow.field("term", pyarrow.string()),
+        pyarrow.field("retrieved", pyarrow.string()),
     ]
 )
 

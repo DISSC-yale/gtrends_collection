@@ -63,7 +63,7 @@ class Service:
 def test_collector():
     collector = Collector(wait_time=0)
     data = collector.process_batches()
-    assert data.columns.to_list() == ["date", "value", "location", "term"]
+    assert data.columns.to_list() == ["date", "value", "location", "term", "retrieved"]
 
 
 def test_code_conversion():

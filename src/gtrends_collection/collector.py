@@ -1,5 +1,6 @@
 """Collect Google Trends health data."""
 
+import datetime
 from os import getenv
 from os.path import isfile
 from time import sleep
@@ -184,6 +185,7 @@ class Collector:
                 * `date`: Date the searches were recorded on.
                 * `location`: Location code in which searches were recorded from.
                 * `term`: The search term.
+                * `retrieved`: Date retrived from the API.
         """
 
         try:
@@ -195,11 +197,13 @@ class Collector:
                 response = self.collect(location, params)
             else:
                 raise e
+        today = (datetime.datetime.now(datetime.timezone.utc)).strftime("%Y-%m-%d")
         data = []
         for line in response["lines"]:
             points = json_normalize(line["points"])
             points["location"] = location
             points["term"] = line["term"]
+            points["retrieved"] = today
             data.append(points)
         return concat(data)
 
