@@ -1,47 +1,50 @@
 """Builds metadata."""
 
 import datetime
-from typing import List
+from os import makedirs
 
-import pandas
 from pyarrow.dataset import dataset
 
 from gtrends_collection import Collector
 
 if __name__ == "__main__":
+    makedirs("summaries", exist_ok=True)
     data = dataset("data").to_table().to_pandas()
 
-    observations = pandas.DataFrame(index=data["location"].unique())
-
-    dates: List[pandas.DataFrame] = []
-    summaries: List[pandas.DataFrame] = []
-
-    for term, term_data in data.groupby("term"):
-        date_range = term_data["date"].agg(["min", "max"])
-        date_range.name = term
-        dates.append(date_range)
-
-        location_coverage = term_data["location"].value_counts()
-        location_coverage.name = term
-        observations = observations.join(location_coverage)
-
-        summary = term_data["value"].agg(["min", "mean", "std", "max"])
-        summary.name = term
-        summaries.append(summary)
-
+    observations = (
+        data.groupby(["location", "term"])["value"]
+        .agg("count")
+        .reset_index()
+        .pivot(columns="term", index="location", values="value")
+    )
     collector = Collector()
     observations.index = collector.full_metro_area_codes(observations.index)
+    observations.to_csv("summaries/observations.csv")
 
+    means = (
+        data.groupby(["location", "term"])["value"]
+        .agg("mean")
+        .reset_index()
+        .pivot(columns="term", index="location", values="value")
+    )
+    means.index = collector.full_metro_area_codes(means.index)
+    means.to_csv("summaries/means.csv")
+
+    dates = data.groupby("term")["date"].agg(["min", "max"])
+    summaries = data.groupby("term")["value"].agg(["min", "mean", "std", "max"])
+
+    summaries_url = "https://github.com/DISSC-yale/gtrends_collection/blob/main/summaries/"
     with open("docs_source/Data.md", "w", encoding="utf-8") as out:
         out.writelines(
             [
                 "Summaries of the data collected as of "
                 + datetime.datetime.now(datetime.timezone.utc).strftime("%I:%M:%S %p UTC on %Y-%m-%d")
+                + f"\n\n## Locations\n\n* [Observations]({summaries_url}observations.csv)"
+                + f"\n* [Means]({summaries_url}means.csv)"
                 + "\n\n## Dates\n\n",
-                pandas.concat(dates, axis=1).T.to_markdown(),
+                dates.to_markdown(),
                 "\n\n## Values\n\n",
-                pandas.concat(summaries, axis=1).T.to_markdown(),
-                "\n\n## Observations By Location\n\n",
-                observations.to_markdown(),
+                summaries.to_markdown(floatfmt=".2f"),
+                "\n",
             ]
         )

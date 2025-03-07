@@ -14,10 +14,15 @@ jobs:
         with:
           python-version: '3.13'
           cache: 'pip'
-      - run: pip install .
-      - run: python scripts/weekly_collection.py
+      - run: |
+          pip install .
+          pip install mkdocs mkdocstrings[python] mkdocs-material tabulate
+      - run: |
+          python scripts/weekly_collection.py
+          python scripts/build_summary.py
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      - run: mkdocs build --clean
       - run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
