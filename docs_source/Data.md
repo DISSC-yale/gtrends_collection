@@ -1,4 +1,4 @@
-Summaries of the data collected as of 12:07:07 AM UTC on 2025-03-09
+Summaries of the data collected as of 08:35:02 AM UTC on 2025-03-10
 
 ## Locations
 
@@ -10,6 +10,7 @@ Summaries of the data collected as of 12:07:07 AM UTC on 2025-03-09
 | term          | min         | max         |
 |:--------------|:------------|:------------|
 | /g/11hy9m64ws | Apr 01 2007 | Sep 30 2018 |
+| /g/11j30ybfx6 | Apr 01 2007 | Sep 30 2018 |
 | /m/0b7k33     | Apr 01 2007 | Sep 30 2018 |
 | /m/0cycc      | Apr 01 2007 | Sep 30 2018 |
 | bronchiolitis | Apr 01 2007 | Sep 30 2018 |
@@ -22,6 +23,7 @@ Summaries of the data collected as of 12:07:07 AM UTC on 2025-03-09
 | term          |   min |    mean |     std |        max |
 |:--------------|------:|--------:|--------:|-----------:|
 | /g/11hy9m64ws |  0.00 |   80.98 | 5889.15 | 4434828.10 |
+| /g/11j30ybfx6 |  0.00 |   66.17 | 9456.00 | 5368845.95 |
 | /m/0b7k33     |  0.00 |   52.12 | 4624.37 | 2077404.38 |
 | /m/0cycc      |  0.00 | 2477.43 | 6522.92 | 1763593.87 |
 | bronchiolitis |  0.00 |   50.46 | 5464.18 | 2642999.99 |
