@@ -35,7 +35,6 @@ def write_to_dataset(data: DataFrame, data_dir="data", defragment=True):
         encoded_term = quote_plus(term)
         part_dir = f"{data_dir}/term={encoded_term}/"
         makedirs(part_dir, exist_ok=True)
-        pyarrow.Table.from_pandas(group, schema=gtrends_schema)
         pyarrow.parquet.write_table(
             pyarrow.Table.from_pandas(group, schema=gtrends_schema),
             f"{part_dir}fragment-{ceil(time())!s}-0.parquet",

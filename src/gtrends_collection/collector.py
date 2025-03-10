@@ -7,7 +7,7 @@ from time import sleep
 from typing import ClassVar, Dict, List, Union
 
 from apiclient import discovery, errors
-from pandas import DataFrame, concat, json_normalize
+from pandas import DataFrame, concat, json_normalize, to_datetime
 
 
 class Collector:
@@ -201,6 +201,7 @@ class Collector:
         data = []
         for line in response["lines"]:
             points = json_normalize(line["points"])
+            points["date"] = to_datetime(points["date"]).dt.strftime("%Y-%m-%d")
             points["location"] = location
             points["term"] = line["term"]
             points["retrieved"] = today

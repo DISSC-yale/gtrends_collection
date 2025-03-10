@@ -1,4 +1,4 @@
-Summaries of the data collected as of 08:35:02 AM UTC on 2025-03-10
+Summaries of the data collected as of 10:55:11 AM UTC on 2025-03-10
 
 ## Locations
 
@@ -7,16 +7,16 @@ Summaries of the data collected as of 08:35:02 AM UTC on 2025-03-10
 
 ## Dates
 
-| term          | min         | max         |
-|:--------------|:------------|:------------|
-| /g/11hy9m64ws | Apr 01 2007 | Sep 30 2018 |
-| /g/11j30ybfx6 | Apr 01 2007 | Sep 30 2018 |
-| /m/0b7k33     | Apr 01 2007 | Sep 30 2018 |
-| /m/0cycc      | Apr 01 2007 | Sep 30 2018 |
-| bronchiolitis | Apr 01 2007 | Sep 30 2018 |
-| influenza     | Apr 01 2007 | Sep 30 2018 |
-| nirsevimab    | Apr 01 2007 | Sep 30 2018 |
-| rsv           | Apr 01 2007 | Sep 30 2018 |
+| term          | min        | max        |
+|:--------------|:-----------|:-----------|
+| /g/11hy9m64ws | 2003-12-28 | 2025-03-02 |
+| /g/11j30ybfx6 | 2003-12-28 | 2025-03-09 |
+| /m/0b7k33     | 2003-12-28 | 2025-03-02 |
+| /m/0cycc      | 2003-12-28 | 2025-03-09 |
+| bronchiolitis | 2003-12-28 | 2025-03-02 |
+| influenza     | 2003-12-28 | 2025-03-09 |
+| nirsevimab    | 2003-12-28 | 2025-03-02 |
+| rsv           | 2003-12-28 | 2025-03-02 |
 
 ## Values
 
