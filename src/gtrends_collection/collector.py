@@ -9,6 +9,8 @@ from typing import ClassVar, Dict, List, Union
 from apiclient import discovery, errors
 from pandas import DataFrame, concat, json_normalize, to_datetime
 
+from gtrends_collection.utils import read_scope
+
 
 class Collector:
     """
@@ -56,7 +58,7 @@ class Collector:
     """
 
     # time to wait between requests
-    _regular_wait_time = 1
+    _regular_wait_time = 0.1
     # time to wait after a `rateLimitExceeded` error
     _fallback_wait_time = 2
     batches: ClassVar[List[DataFrame]] = []
@@ -123,13 +125,8 @@ class Collector:
         if end:
             params["time_endDate"] = end
 
-        if override_terms:
-            terms = override_terms
-        else:
-            with open(f"{self.scope_dir}/terms.txt", encoding="utf-8") as content:
-                terms = [term.strip() for term in content.readlines()]
-
-        locations = override_location if override_location else self._get_locations()
+        terms = override_terms if override_terms else read_scope(self.scope_dir, "terms")
+        locations = override_location if override_location else read_scope(self.scope_dir, "locations")
 
         for term_set in range(0, len(terms), self.max_terms):
             for location in locations:
@@ -207,34 +204,6 @@ class Collector:
             points["retrieved"] = today
             data.append(points)
         return concat(data)
-
-    def _get_locations(self) -> List[str]:
-        with open(f"{self.scope_dir}/locations.txt", encoding="utf-8") as content:
-            locations = [code.strip() for code in content.readlines()]
-        return locations
-
-    def full_metro_area_codes(self, locations: List[str]) -> List[str]:
-        """
-        Adds country and state codes to metro area codes (e.g., `630` becomes `US-AL-630`),
-        based on `scope_dir/locations.txt`.
-
-        Args:
-            locations (List[str]): Locations to potentially prepend full location codes to.
-
-        Examples:
-            ```python
-            collector.full_metro_area_codes(["630", "522"])
-            ```
-
-        Returns:
-            A version of `locations` with any matching locations expanded.
-        """
-        location_map: Dict[str, str] = {}
-        for location in self._get_locations():
-            if len(location) == 9:
-                location_parts = location.split("-")
-                location_map[location_parts[2]] = location
-        return [location_map.get(loc, loc) for loc in locations]
 
 
 def _location_type(location: str):

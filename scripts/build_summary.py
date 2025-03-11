@@ -3,9 +3,10 @@
 import datetime
 from os import makedirs
 
+from pandas import Index
 from pyarrow.dataset import dataset
 
-from gtrends_collection import Collector
+from gtrends_collection import Collector, full_term_names, full_metro_area_codes
 
 if __name__ == "__main__":
     makedirs("summaries", exist_ok=True)
@@ -18,7 +19,7 @@ if __name__ == "__main__":
         .pivot(columns="term", index="location", values="value")
     )
     collector = Collector()
-    observations.index = collector.full_metro_area_codes(observations.index)
+    observations.index = full_metro_area_codes("scope", observations.index)
     observations.to_csv("summaries/observations.csv")
 
     means = (
@@ -27,11 +28,13 @@ if __name__ == "__main__":
         .reset_index()
         .pivot(columns="term", index="location", values="value")
     )
-    means.index = collector.full_metro_area_codes(means.index)
+    means.index = full_metro_area_codes("scope", means.index)
     means.to_csv("summaries/means.csv")
 
     dates = data.groupby("term")["date"].agg(["min", "max"])
+    dates.index = Index(full_term_names("scope", dates.index), name="term")
     summaries = data.groupby("term")["value"].agg(["min", "mean", "std", "max"])
+    summaries.index = Index(full_term_names("scope", summaries.index), name="term")
 
     summaries_url = "https://github.com/DISSC-yale/gtrends_collection/blob/main/summaries/"
     with open("docs_source/Data.md", "w", encoding="utf-8") as out:

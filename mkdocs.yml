@@ -45,6 +45,9 @@ markdown_extensions:
 nav:
   - Home: README.md
   - Data.md
-  - Collection Mechanism: Collector.md
+  - Functions:
+      - functions/Collector.md
+      - functions/dataset.md
+      - functions/utils.md
   - Framework.md
   - Test Coverage: coverage/index.html

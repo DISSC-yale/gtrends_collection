@@ -1,2 +1,3 @@
 from gtrends_collection.collector import Collector
 from gtrends_collection.dataset import write_to_dataset, defragment_dataset
+from gtrends_collection.utils import read_scope, full_term_names, full_metro_area_codes
