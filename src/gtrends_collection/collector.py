@@ -127,16 +127,16 @@ class Collector:
 
         terms = override_terms if override_terms else read_scope(self.scope_dir, "terms")
         locations = override_location if override_location else read_scope(self.scope_dir, "locations")
+        locations = {loc if len(loc) < 9 else loc.split("-")[2] for loc in locations}
 
         for term_set in range(0, len(terms), self.max_terms):
             for location in locations:
-                loc = location if len(location) < 9 else location.split("-")[2]
                 batch_params = {
                     "terms": terms[term_set : (term_set + self.max_terms)],
                     **params,
                 }
-                batch_params[_location_type(loc)] = loc
-                batch = self.collect(loc, batch_params)
+                batch_params[_location_type(location)] = location
+                batch = self.collect(location, batch_params)
                 self.batches.append(batch)
                 sleep(self._regular_wait_time)
 

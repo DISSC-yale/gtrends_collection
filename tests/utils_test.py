@@ -1,4 +1,4 @@
-from gtrends_collection import full_term_names, full_metro_area_codes
+from gtrends_collection import full_metro_area_codes, full_term_names
 
 
 def test_term_conversion():

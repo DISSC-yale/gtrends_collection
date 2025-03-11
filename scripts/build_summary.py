@@ -6,7 +6,7 @@ from os import makedirs
 from pandas import Index
 from pyarrow.dataset import dataset
 
-from gtrends_collection import Collector, full_term_names, full_metro_area_codes
+from gtrends_collection import Collector, full_metro_area_codes, full_term_names
 
 if __name__ == "__main__":
     makedirs("summaries", exist_ok=True)
