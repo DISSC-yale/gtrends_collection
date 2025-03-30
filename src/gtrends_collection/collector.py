@@ -189,11 +189,10 @@ class Collector:
             # pylint: disable=E1101
             response = self.service.getTimelinesForHealth(**params).execute()
         except errors.HttpError as e:
-            if e.reason == "rateLimitExceeded":
+            if e.status_code == 429:
                 sleep(self._fallback_wait_time)
-                response = self.collect(location, params)
-            else:
-                raise e
+                return self.collect(location, params)
+            raise e
         today = (datetime.datetime.now(datetime.timezone.utc)).strftime("%Y-%m-%d")
         data = []
         for line in response["lines"]:
