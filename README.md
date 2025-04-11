@@ -45,6 +45,14 @@ python scripts/historical_collection.py
 The [scripts/weekly_collection.py](scripts/weekly_collection.py) script is used by the GitHub Actions workflow
 to add new data each week.
 
+The [scripts/add_terms.py](scripts/add_terms.py) script can be used to add and collect new terms:
+
+```sh
+python scripts/add_terms.py "term, another term"
+```
+
+Any topic or category terms should also be manually added to [scope/term_map.csv](scope/term_map.csv).
+
 #### Authentication
 
 A developer key is required to collect from the beta API.
