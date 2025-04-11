@@ -1,4 +1,4 @@
-Summaries of the data collected as of 04:09:16 PM UTC on 2025-04-11
+Summaries of the data collected as of 08:44:42 PM UTC on 2025-04-11
 
 ## Locations
 
@@ -19,6 +19,7 @@ Summaries of the data collected as of 04:09:16 PM UTC on 2025-04-11
 | drug overdose                                       | 2003-12-28 | 2025-04-06 |
 | influenza                                           | 2003-12-28 | 2025-04-06 |
 | nirsevimab                                          | 2003-12-28 | 2025-04-06 |
+| overdose                                            | 2003-12-28 | 2025-04-06 |
 | rsv                                                 | 2003-12-28 | 2025-04-06 |
 
 ## Values
@@ -35,4 +36,5 @@ Summaries of the data collected as of 04:09:16 PM UTC on 2025-04-11
 | drug overdose                                       |  0.00 |   76.94 | 11683.22 | 5575236.16 |
 | influenza                                           |  0.00 |  188.20 |  3656.12 | 1362586.92 |
 | nirsevimab                                          |  0.00 |   33.75 |  2759.64 | 1325261.88 |
+| overdose                                            |  0.00 |  326.91 |  5872.10 | 2339361.70 |
 | rsv                                                 |  0.00 |  279.33 |  3064.81 | 1175033.41 |
