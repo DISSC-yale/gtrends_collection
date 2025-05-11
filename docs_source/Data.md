@@ -1,4 +1,4 @@
-Summaries of the data collected as of 12:17:42 AM UTC on 2025-05-04
+Summaries of the data collected as of 12:18:09 AM UTC on 2025-05-11
 
 ## Locations
 
@@ -9,32 +9,32 @@ Summaries of the data collected as of 12:17:42 AM UTC on 2025-05-04
 
 | term                                                | min        | max        |
 |:----------------------------------------------------|:-----------|:-----------|
-| Respiratory syncytial virus (/g/11hy9m64ws)         | 2003-12-28 | 2025-05-04 |
-| Respiratory syncytial virus vaccine (/g/11j30ybfx6) | 2003-12-28 | 2025-05-04 |
-| Nirsevimab (/g/11q4gh4b8f)                          | 2025-03-23 | 2025-05-04 |
-| Bronchiolitis obliterans (/m/0b7k33)                | 2003-12-28 | 2025-05-04 |
-| Influenza (/m/0cycc)                                | 2003-12-28 | 2025-05-04 |
-| Naloxone                                            | 2003-12-28 | 2025-05-04 |
-| bronchiolitis                                       | 2003-12-28 | 2025-05-04 |
-| drug overdose                                       | 2003-12-28 | 2025-05-04 |
-| influenza                                           | 2003-12-28 | 2025-05-04 |
-| nirsevimab                                          | 2003-12-28 | 2025-05-04 |
-| overdose                                            | 2003-12-28 | 2025-05-04 |
-| rsv                                                 | 2003-12-28 | 2025-05-04 |
+| Respiratory syncytial virus (/g/11hy9m64ws)         | 2003-12-28 | 2025-05-11 |
+| Respiratory syncytial virus vaccine (/g/11j30ybfx6) | 2003-12-28 | 2025-05-11 |
+| Nirsevimab (/g/11q4gh4b8f)                          | 2025-03-23 | 2025-05-11 |
+| Bronchiolitis obliterans (/m/0b7k33)                | 2003-12-28 | 2025-05-11 |
+| Influenza (/m/0cycc)                                | 2003-12-28 | 2025-05-11 |
+| Naloxone                                            | 2003-12-28 | 2025-05-11 |
+| bronchiolitis                                       | 2003-12-28 | 2025-05-11 |
+| drug overdose                                       | 2003-12-28 | 2025-05-11 |
+| influenza                                           | 2003-12-28 | 2025-05-11 |
+| nirsevimab                                          | 2003-12-28 | 2025-05-11 |
+| overdose                                            | 2003-12-28 | 2025-05-11 |
+| rsv                                                 | 2003-12-28 | 2025-05-11 |
 
 ## Values
 
 | term                                                |   min |    mean |      std |        max |
 |:----------------------------------------------------|------:|--------:|---------:|-----------:|
-| Respiratory syncytial virus (/g/11hy9m64ws)         |  0.00 |   81.69 |  5881.12 | 4434828.10 |
-| Respiratory syncytial virus vaccine (/g/11j30ybfx6) |  0.00 |   66.10 |  9403.55 | 5368845.95 |
-| Nirsevimab (/g/11q4gh4b8f)                          |  0.00 |   23.04 |   879.26 |   35026.18 |
-| Bronchiolitis obliterans (/m/0b7k33)                |  0.00 |   52.33 |  4621.94 | 2077404.38 |
-| Influenza (/m/0cycc)                                |  0.00 | 2478.16 |  6513.78 | 1763593.87 |
-| Naloxone                                            |  0.00 |   86.71 | 13674.32 | 6706513.72 |
-| bronchiolitis                                       |  0.00 |   50.49 |  5457.40 | 2642999.99 |
-| drug overdose                                       |  0.00 |   76.95 | 11662.97 | 5575236.16 |
-| influenza                                           |  0.00 |  188.16 |  3653.28 | 1362586.92 |
-| nirsevimab                                          |  0.00 |   33.90 |  2759.09 | 1325261.88 |
-| overdose                                            |  0.00 |  328.85 |  5893.78 | 2339361.70 |
-| rsv                                                 |  0.00 |  279.58 |  3075.23 | 1175033.41 |
+| Respiratory syncytial virus (/g/11hy9m64ws)         |  0.00 |   81.73 |  5880.20 | 4434828.10 |
+| Respiratory syncytial virus vaccine (/g/11j30ybfx6) |  0.00 |   66.23 |  9398.07 | 5368845.95 |
+| Nirsevimab (/g/11q4gh4b8f)                          |  0.00 |  132.50 |  4900.09 |  222482.19 |
+| Bronchiolitis obliterans (/m/0b7k33)                |  0.00 |   52.38 |  4621.19 | 2077404.38 |
+| Influenza (/m/0cycc)                                |  0.00 | 2477.76 |  6514.79 | 1763593.87 |
+| Naloxone                                            |  0.00 |   86.71 | 13668.23 | 6706513.72 |
+| bronchiolitis                                       |  0.00 |   50.59 |  5457.96 | 2642999.99 |
+| drug overdose                                       |  0.00 |   77.00 | 11657.92 | 5575236.16 |
+| influenza                                           |  0.00 |  188.48 |  3667.41 | 1362586.92 |
+| nirsevimab                                          |  0.00 |   34.03 |  2762.11 | 1325261.88 |
+| overdose                                            |  0.00 |  328.87 |  5888.55 | 2339361.70 |
+| rsv                                                 |  0.00 |  279.54 |  3074.55 | 1175033.41 |
