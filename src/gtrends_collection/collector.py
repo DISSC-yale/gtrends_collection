@@ -197,7 +197,7 @@ class Collector:
         data = []
         for line in response["lines"]:
             points = json_normalize(line["points"])
-            points["date"] = to_datetime(points["date"]).dt.strftime("%Y-%m-%d")
+            points["date"] = to_datetime(points["date"], format="mixed").dt.strftime("%Y-%m-%d")
             points["location"] = location
             points["term"] = line["term"]
             points["retrieved"] = today

@@ -15,5 +15,5 @@ in the root directory, but each can be redirected with function arguments.
 On top of those components, the `.github/workflows/weekply_collection.yaml` file defines
 a GitHub action used to perform regular updates.
 
-This depends on the `GOOGLE_API_KEY` being defined in actions secretes (Settings > Secrets and variables > ACtions > Secrets)
+This depends on the `GOOGLE_API_KEY` being defined in actions secretes (Settings > Secrets and variables > Actions > Secrets)
 and actions having write permissions (Settings > Actions > General > Workflow permissions).
