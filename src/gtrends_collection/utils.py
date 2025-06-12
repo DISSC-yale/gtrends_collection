@@ -27,7 +27,7 @@ def read_scope(scope_dir: str, which: str) -> List[str]:
     return locations
 
 
-def full_term_names(scope_dir: str, terms: List[str], include_id=True) -> List[str]:
+def full_term_names(scope_dir: str, terms: List[str], include_id: bool = True) -> List[str]:
     """
     Converts topic and category IDs to their full names, based on `scope_dir/term_map.csv`.
 

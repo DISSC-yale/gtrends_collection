@@ -22,7 +22,7 @@ gtrends_schema = pyarrow.schema(
 )
 
 
-def write_to_dataset(data: DataFrame, data_dir="data", defragment=True):
+def write_to_dataset(data: DataFrame, data_dir: str = "data", defragment: bool = True):
     """
     Write term fragments to a Parquet dataset.
 
@@ -44,7 +44,7 @@ def write_to_dataset(data: DataFrame, data_dir="data", defragment=True):
         defragment_dataset(data_dir)
 
 
-def defragment_dataset(data_dir="data"):
+def defragment_dataset(data_dir: str = "data"):
     """
     Defragments the dataset partitions.
 

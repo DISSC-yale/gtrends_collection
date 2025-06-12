@@ -66,7 +66,14 @@ class Collector:
     scope_dir = "scope"
     max_terms = 1
 
-    def __init__(self, scope_dir="scope", key_dir=".", terms_per_batch=1, wait_time=0.1, version="v1beta"):
+    def __init__(
+        self,
+        scope_dir: str = "scope",
+        key_dir: str = ".",
+        terms_per_batch: int = 1,
+        wait_time: float = 0.1,
+        version: str = "v1beta",
+    ):
         self._regular_wait_time = wait_time
         self.scope_dir = scope_dir
         self.max_terms = terms_per_batch
@@ -94,7 +101,7 @@ class Collector:
         self,
         start: Union[str, None] = None,
         end: Union[str, None] = None,
-        resolution="week",
+        resolution: str = "week",
         override_terms: Union[List[str], None] = None,
         override_location: Union[List[str], None] = None,
     ) -> DataFrame:

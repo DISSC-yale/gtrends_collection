@@ -20,6 +20,9 @@ theme:
         name: Switch to dark theme
   features:
     - content.code.copy
+  favicon: assets/icon.svg
+  logo: assets/logo.png
+copyright: <a href="https://dissc.yale.edu/">&#10140; Data Intensive Social Science Center</a>
 repo_url: https://github.com/dissc-yale/gtrends_collection
 plugins:
   - search
