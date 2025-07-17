@@ -1,4 +1,4 @@
-Summaries of the data collected as of 10:11:57 PM UTC on 2025-07-13
+Summaries of the data collected as of 01:27:04 PM UTC on 2025-07-17
 
 ## Locations
 
@@ -18,6 +18,7 @@ Summaries of the data collected as of 10:11:57 PM UTC on 2025-07-13
 | bronchiolitis                                       | 2003-12-28 | 2025-07-13 |
 | drug overdose                                       | 2003-12-28 | 2025-07-13 |
 | influenza                                           | 2003-12-28 | 2025-07-13 |
+| narcan                                              | 2003-12-28 | 2025-07-13 |
 | nirsevimab                                          | 2003-12-28 | 2025-07-13 |
 | overdose                                            | 2003-12-28 | 2025-07-13 |
 | rsv                                                 | 2003-12-28 | 2025-07-13 |
@@ -35,6 +36,7 @@ Summaries of the data collected as of 10:11:57 PM UTC on 2025-07-13
 | bronchiolitis                                       |  0.00 |   50.19 |  5441.87 | 2642999.99 |
 | drug overdose                                       |  0.00 |   75.80 | 11571.83 | 5575236.16 |
 | influenza                                           |  0.00 |  190.02 |  3640.52 | 1362586.92 |
+| narcan                                              |  0.00 |   73.92 |  4850.16 | 1643030.73 |
 | nirsevimab                                          |  0.00 |   33.41 |  2744.46 | 1325261.88 |
 | overdose                                            |  0.00 |  332.41 |  5762.26 | 2339361.70 |
 | rsv                                                 |  0.00 |  282.15 |  3052.12 | 1175033.41 |
