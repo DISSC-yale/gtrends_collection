@@ -10,7 +10,7 @@ if __name__ == "__main__":
     req = requests.get("https://trends.google.com/trends/api/explore/pickers/geo", timeout=999)
     if req.status_code == 200:
         geos = json.loads(re.sub("^[^{]+", "", req.content.decode()))
-        locations = []
+        locations = ["US"]
         for child in geos["children"]:
             if child["id"] == "US":
                 for state in child["children"]:
