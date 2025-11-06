@@ -45,6 +45,14 @@ python scripts/historical_collection.py
 The `scripts/weekly_collection.py` script is used by the GitHub Actions workflow
 to add new data each week.
 
+The `scripts/add_terms.py` script can be used to add and collect new terms:
+
+```sh
+python scripts/add_terms.py "term, another term"
+```
+
+Any topic or category terms should also be manually added to `scope/term_map.csv`.
+
 #### Authentication
 
 A developer key is required to collect from the beta API.
@@ -54,6 +62,42 @@ or stored in an `.env` file:
 
 ```sh
 GOOGLE_API_KEY=AlphanumericKey
+```
+
+## Rebuilding
+
+### Scripts
+
+Some scripts are used to build parts of the repository.
+
+#### Summary
+
+The `scipts/build_summary.py` script creates `docs_source/Data.md`:
+
+```sh
+python scripts/build_summary.py
+```
+
+#### Metadata
+
+The `scipts/build_metadata.py` script creates `scope/locations.txt`:
+
+```sh
+python scripts/build_metadata.py
+```
+
+### Hatch
+
+[Hatch](https://hatch.pypa.io) is used to manage package testing:
+
+```sh
+hatch run test
+```
+
+And building of the documentation site:
+
+```sh
+hatch run docs:build
 ```
 
 ## Legal Disclaimer

@@ -11,3 +11,7 @@ Naloxone
 drug overdose
 overdose
 narcan
+heat exhaustion
+heat stroke
+shotgun
+9mm

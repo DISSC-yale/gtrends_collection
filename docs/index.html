@@ -352,6 +352,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rebuilding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rebuilding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hatch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#legal-disclaimer" class="md-nav__link">
     <span class="md-ellipsis">
       Legal Disclaimer
@@ -623,6 +680,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rebuilding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rebuilding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hatch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#legal-disclaimer" class="md-nav__link">
     <span class="md-ellipsis">
       Legal Disclaimer
@@ -677,11 +791,33 @@ based on the scope files:</p>
 </span></code></pre></div>
 <p>The <code>scripts/weekly_collection.py</code> script is used by the GitHub Actions workflow
 to add new data each week.</p>
+<p>The <code>scripts/add_terms.py</code> script can be used to add and collect new terms:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>scripts/add_terms.py<span class="w"> </span><span class="s2">&quot;term, another term&quot;</span>
+</span></code></pre></div>
+<p>Any topic or category terms should also be manually added to <code>scope/term_map.csv</code>.</p>
 <h4 id="authentication">Authentication</h4>
 <p>A developer key is required to collect from the beta API.</p>
 <p>This can either be set to the <code>GOOGLE_API_KEY</code> environment variable,
 or stored in an <code>.env</code> file:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">GOOGLE_API_KEY</span><span class="o">=</span>AlphanumericKey
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">GOOGLE_API_KEY</span><span class="o">=</span>AlphanumericKey
+</span></code></pre></div>
+<h2 id="rebuilding">Rebuilding</h2>
+<h3 id="scripts">Scripts</h3>
+<p>Some scripts are used to build parts of the repository.</p>
+<h4 id="summary">Summary</h4>
+<p>The <code>scipts/build_summary.py</code> script creates <code>docs_source/Data.md</code>:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>scripts/build_summary.py
+</span></code></pre></div>
+<h4 id="metadata">Metadata</h4>
+<p>The <code>scipts/build_metadata.py</code> script creates <code>scope/locations.txt</code>:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>scripts/build_metadata.py
+</span></code></pre></div>
+<h3 id="hatch">Hatch</h3>
+<p><a href="https://hatch.pypa.io">Hatch</a> is used to manage package testing:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hatch<span class="w"> </span>run<span class="w"> </span><span class="nb">test</span>
+</span></code></pre></div>
+<p>And building of the documentation site:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hatch<span class="w"> </span>run<span class="w"> </span>docs:build
 </span></code></pre></div>
 <h2 id="legal-disclaimer">Legal Disclaimer</h2>
 <p>Data are provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors, contributors, or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the data or the use or other dealings in the data.</p>
