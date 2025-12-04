@@ -5,7 +5,8 @@ and a minimal framework to organize historical and continuous collection.
 
 ## Data
 
-A selection of data are collected in the `data` directory, and are updated weekly.
+A selection of data are collected in the `data` directory (weekly data updated weekly)
+and in the `data_yearly` directory (yearly data updated weekly).
 
 The selection is defined by the files in the `scope` directory.
 
@@ -43,7 +44,8 @@ python scripts/historical_collection.py
 ```
 
 The `scripts/weekly_collection.py` script is used by the GitHub Actions workflow
-to add new data each week.
+to add new data each week. The `scripts/yearly_collection.py` script is used
+by another workflow to add yearly data each month.
 
 The `scripts/add_terms.py` script can be used to add and collect new terms:
 
@@ -72,15 +74,17 @@ Some scripts are used to build parts of the repository.
 
 #### Summary
 
-The `scipts/build_summary.py` script creates `docs_source/Data.md`:
+The `scripts/build_summary.py` script creates `docs_source/Data.md`:
 
 ```sh
 python scripts/build_summary.py
 ```
 
+The `scripts/build_summary_yearly.py` script creates `docs_source/Data_Yearly.md`:
+
 #### Metadata
 
-The `scipts/build_metadata.py` script creates `scope/locations.txt`:
+The `scripts/build_metadata.py` script creates `scope/locations.txt`:
 
 ```sh
 python scripts/build_metadata.py

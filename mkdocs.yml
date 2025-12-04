@@ -48,6 +48,7 @@ markdown_extensions:
 nav:
   - Home: README.md
   - Data.md
+  - Data Yearly: Data_Yearly.md
   - Functions:
       - functions/Collector.md
       - functions/dataset.md

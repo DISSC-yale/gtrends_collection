@@ -1,0 +1,31 @@
+on:
+  schedule:
+    - cron: '0 22 * * 2'
+  workflow_dispatch:
+
+jobs:
+  weekly-collection:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+      - run: |
+          pip install .
+          pip install mkdocs mkdocstrings[python] mkdocs-material tabulate
+      - run: |
+          python scripts/yearly_collection.py
+          python scripts/build_summary_yearly.py
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      - run: mkdocs build --clean
+      - run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -A
+          git commit -m "adds yearly data pull"
+          git push

@@ -311,6 +311,33 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Data_Yearly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Yearly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -320,10 +347,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -341,8 +368,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -636,13 +663,13 @@
 <li>The <code>GOOGLE_API_KEY</code> environment variable, which may be stored in a <code>.env</code> file.</li>
 <li>A pair of <code>scope</code> files to define the main collection targets.</li>
 <li><code>scripts</code> to define different collection tasks.</li>
-<li>A <code>data</code> output directory to write results to.</li>
+<li>An output directory (<code>data</code> or <code>data_yearly</code>) to write results to.</li>
 </ol>
 <p>These make up a structure around which data are collected. By default, they are assumed to be
 in the root directory, but each can be redirected with function arguments.</p>
 <h2 id="automatic-updates">Automatic Updates</h2>
-<p>On top of those components, the <code>.github/workflows/weekply_collection.yaml</code> file defines
-a GitHub action used to perform regular updates.</p>
+<p>On top of those components, the <code>.github/workflows/weekly_collection.yaml</code> and <code>.github/workflows/yearly_collection.yaml</code> files defines
+GitHub actions used to perform regular updates.</p>
 <p>This depends on the <code>GOOGLE_API_KEY</code> being defined in actions secretes (Settings &gt; Secrets and variables &gt; Actions &gt; Secrets)
 and actions having write permissions (Settings &gt; Actions &gt; General &gt; Workflow permissions).</p>
 
