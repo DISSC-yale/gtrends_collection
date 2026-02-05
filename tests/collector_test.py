@@ -35,6 +35,7 @@ class Service:
         timelineResolution: str,
         time_startDate: str = "2004-01-01",
         time_endDate: str = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
+        geoRestriction_country: Union[str, None] = None,
         geoRestriction_state: Union[str, None] = None,
         geoRestriction_region: Union[str, None] = None,
         geoRestriction_dma: Union[str, None] = None,
@@ -43,6 +44,7 @@ class Service:
         self.timelineResolution = timelineResolution
         self.time_startDate = time_startDate
         self.time_endDate = time_endDate
+        self.geoRestriction_country = geoRestriction_country
         self.geoRestriction_state = geoRestriction_state
         self.geoRestriction_region = geoRestriction_region
         self.geoRestriction_dma = geoRestriction_dma
