@@ -23,7 +23,7 @@ def test_dataset():
         write_to_dataset(data, data_dir)
         assert dataset(data_dir).scanner(["term"]).to_table()["term"].to_pylist() == data["term"].to_list()
 
-        log_file = tempdir + "/status.json"
+        log_file = tempdir + "/data_state.json"
         assert isfile(log_file)
         with open(log_file, "r", encoding="utf-8") as file:
             state = json.load(file)

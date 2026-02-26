@@ -75,7 +75,7 @@ def update_status(data_dir: str, log_file: Union[str, None] = None):
       log_file (str): path to the log file.
     """
     if log_file is None:
-        log_file = dirname(abspath(data_dir)) + "/status.json"
+        log_file = dirname(abspath(data_dir)) + "/data_state.json"
     print(log_file)
     files = glob(f"{data_dir}/**/*.parquet")
     if isfile(log_file):
