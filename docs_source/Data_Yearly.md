@@ -1,4 +1,4 @@
-Summaries of the data collected as of 10:55:06 PM UTC on 2026-06-09
+Summaries of the data collected as of 10:59:53 PM UTC on 2026-06-16
 
 ## Locations
 
@@ -31,20 +31,20 @@ Summaries of the data collected as of 10:55:06 PM UTC on 2026-06-09
 
 | term                                                |   min |    mean |     std |      max |
 |:----------------------------------------------------|------:|--------:|--------:|---------:|
-| Respiratory syncytial virus (/g/11hy9m64ws)         |  0.00 |   95.62 |  251.36 | 29840.18 |
-| Respiratory syncytial virus vaccine (/g/11j30ybfx6) |  0.00 |   32.22 |  138.21 | 30153.91 |
-| Nirsevimab (/g/11q4gh4b8f)                          |  0.00 |    1.21 |   85.00 | 23005.75 |
-| Bronchiolitis obliterans (/m/0b7k33)                |  0.00 |   27.72 |   91.00 | 21542.75 |
-| Influenza (/m/0cycc)                                |  0.00 | 3208.99 | 2204.39 | 22310.21 |
-| 9mm                                                 |  0.00 | 1049.51 |  607.32 | 30122.85 |
-| Naloxone                                            |  0.00 |   40.47 |  119.42 | 28040.34 |
-| bronchiolitis                                       |  0.00 |   23.49 |   74.01 | 16823.03 |
-| drug overdose                                       |  0.00 |   35.84 |   64.46 | 17268.06 |
-| heat exhaustion                                     |  0.00 |   47.43 |   75.08 | 14502.91 |
-| heat stroke                                         |  0.00 |   73.13 |   88.75 | 22370.12 |
-| influenza                                           |  0.00 |  365.99 |  359.40 |  7278.06 |
-| narcan                                              |  0.00 |   68.93 |  102.30 | 18190.90 |
-| nirsevimab                                          |  0.00 |    0.76 |   32.26 |  8290.39 |
-| overdose                                            |  0.00 |  606.51 |  212.74 | 15300.26 |
-| rsv                                                 |  0.00 |  424.93 |  389.96 | 17529.28 |
-| shotgun                                             |  0.00 | 1521.89 |  624.16 | 32129.36 |
+| Respiratory syncytial virus (/g/11hy9m64ws)         |  0.00 |   95.57 |  250.36 | 29840.18 |
+| Respiratory syncytial virus vaccine (/g/11j30ybfx6) |  0.00 |   32.18 |  136.48 | 30153.91 |
+| Nirsevimab (/g/11q4gh4b8f)                          |  0.00 |    1.19 |   83.54 | 23005.75 |
+| Bronchiolitis obliterans (/m/0b7k33)                |  0.00 |   27.72 |   89.68 | 21542.75 |
+| Influenza (/m/0cycc)                                |  0.00 | 3206.18 | 2199.75 | 22310.21 |
+| 9mm                                                 |  0.00 | 1049.60 |  607.06 | 30122.85 |
+| Naloxone                                            |  0.00 |   40.50 |  117.66 | 28040.34 |
+| bronchiolitis                                       |  0.00 |   23.56 |   77.15 | 16823.03 |
+| drug overdose                                       |  0.00 |   35.88 |   63.93 | 17268.06 |
+| heat exhaustion                                     |  0.00 |   47.48 |   74.59 | 14502.91 |
+| heat stroke                                         |  0.00 |   73.23 |   88.20 | 22370.12 |
+| influenza                                           |  0.00 |  365.72 |  358.15 |  7278.06 |
+| narcan                                              |  0.00 |   68.95 |  101.49 | 18190.90 |
+| nirsevimab                                          |  0.00 |    0.76 |   32.01 |  8290.39 |
+| overdose                                            |  0.00 |  606.74 |  213.57 | 15300.26 |
+| rsv                                                 |  0.00 |  425.01 |  395.35 | 27429.55 |
+| shotgun                                             |  0.00 | 1521.75 |  623.69 | 32129.36 |
