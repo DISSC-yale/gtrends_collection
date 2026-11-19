@@ -4,14 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Coverage for tests\utils_test.py: 100%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
-    <link rel="stylesheet" href="style_cb_5c747636.css" type="text/css">
-    <script src="coverage_html_cb_188fc9a4.js" defer></script>
+    <link rel="stylesheet" href="style_cb_0853b3de.css" type="text/css">
+    <script src="coverage_html_cb_c74880ea.js" defer></script>
 </head>
 <body class="pyfile">
 <header>
     <div class="content">
         <h1>
-            <span class="text">Coverage for </span><b>tests&#8201;\&#8201;utils_test.py</b>:
+            <span class="text">Coverage for </span><b>tests<span class="sep">\</span>utils_test.py</b>:
             <span class="pc_cov">100%</span>
         </h1>
         <aside id="help_panel_wrapper">
@@ -66,8 +66,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="index.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.3">coverage.py v7.13.3</a>,
-            created at 2026-02-05 04:42 -0500
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.3">coverage.py v7.17.3</a>,
+            created at 2026-11-19 13:20 -0500
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -86,15 +86,15 @@
     <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t"><span class="key">def</span> <span class="nam">test_term_conversion</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t">    <span class="nam">names</span> <span class="op">=</span> <span class="op">[</span><span class="str">"rsv"</span><span class="op">,</span> <span class="str">"Influenza (/m/0cycc)"</span><span class="op">,</span> <span class="str">"Respiratory syncytial virus (/g/11hy9m64ws)"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">    <span class="nam">terms</span> <span class="op">=</span> <span class="op">[</span><span class="str">"rsv"</span><span class="op">,</span> <span class="str">"/m/0cycc"</span><span class="op">,</span> <span class="str">"/g/11hy9m64ws"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">    <span class="key">assert</span> <span class="nam">full_term_names</span><span class="op">(</span><span class="str">"scope"</span><span class="op">,</span> <span class="nam">terms</span><span class="op">)</span> <span class="op">==</span> <span class="nam">names</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t">    <span class="nam">names</span> <span class="op">=</span> <span class="op">[</span><span class="str">&quot;rsv&quot;</span><span class="op">,</span> <span class="str">&quot;Influenza (/m/0cycc)&quot;</span><span class="op">,</span> <span class="str">&quot;Respiratory syncytial virus (/g/11hy9m64ws)&quot;</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">    <span class="nam">terms</span> <span class="op">=</span> <span class="op">[</span><span class="str">&quot;rsv&quot;</span><span class="op">,</span> <span class="str">&quot;/m/0cycc&quot;</span><span class="op">,</span> <span class="str">&quot;/g/11hy9m64ws&quot;</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">    <span class="key">assert</span> <span class="nam">full_term_names</span><span class="op">(</span><span class="str">&quot;scope&quot;</span><span class="op">,</span> <span class="nam">terms</span><span class="op">)</span> <span class="op">==</span> <span class="nam">names</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">def</span> <span class="nam">test_location_conversion</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">    <span class="nam">full</span> <span class="op">=</span> <span class="op">[</span><span class="str">"US-AL"</span><span class="op">,</span> <span class="str">"US-AL-630"</span><span class="op">,</span> <span class="str">"US-AK-743"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">    <span class="nam">partial</span> <span class="op">=</span> <span class="op">[</span><span class="str">"US-AL"</span><span class="op">,</span> <span class="str">"630"</span><span class="op">,</span> <span class="str">"743"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="key">assert</span> <span class="nam">full_metro_area_codes</span><span class="op">(</span><span class="str">"scope"</span><span class="op">,</span> <span class="nam">partial</span><span class="op">)</span> <span class="op">==</span> <span class="nam">full</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">    <span class="nam">full</span> <span class="op">=</span> <span class="op">[</span><span class="str">&quot;US-AL&quot;</span><span class="op">,</span> <span class="str">&quot;US-AL-630&quot;</span><span class="op">,</span> <span class="str">&quot;US-AK-743&quot;</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">    <span class="nam">partial</span> <span class="op">=</span> <span class="op">[</span><span class="str">&quot;US-AL&quot;</span><span class="op">,</span> <span class="str">&quot;630&quot;</span><span class="op">,</span> <span class="str">&quot;743&quot;</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="key">assert</span> <span class="nam">full_metro_area_codes</span><span class="op">(</span><span class="str">&quot;scope&quot;</span><span class="op">,</span> <span class="nam">partial</span><span class="op">)</span> <span class="op">==</span> <span class="nam">full</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -103,8 +103,8 @@
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.3">coverage.py v7.13.3</a>,
-            created at 2026-02-05 04:42 -0500
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.3">coverage.py v7.17.3</a>,
+            created at 2026-11-19 13:20 -0500
         </p>
     </div>
 </footer>
