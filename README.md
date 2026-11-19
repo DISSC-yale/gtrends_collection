@@ -74,13 +74,13 @@ Some scripts are used to build parts of the repository.
 
 #### Summary
 
-The [scripts/build_summary.py](scripts/build_summary.py) script creates [docs_source/Data.md](docs_source/Data.md):
+The [scripts/build_summary.py](scripts/build_summary.py) script creates [docs/Data.md](docs/Data.md):
 
 ```sh
 python scripts/build_summary.py
 ```
 
-The [scripts/build_summary_yearly.py](scripts/build_summary_yearly.py) script creates [docs_source/Data_Yearly.md](docs_source/Data_Yearly.md):
+The [scripts/build_summary_yearly.py](scripts/build_summary_yearly.py) script creates [docs/Data_Yearly.md](docs/Data_Yearly.md):
 
 #### Metadata
 

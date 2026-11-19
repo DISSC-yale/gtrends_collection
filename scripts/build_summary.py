@@ -37,7 +37,7 @@ if __name__ == "__main__":
     summaries.index = Index(full_term_names("scope", summaries.index), name="term")
 
     summaries_url = "https://github.com/DISSC-yale/gtrends_collection/blob/main/summaries/"
-    with open("docs_source/Data.md", "w", encoding="utf-8") as out:
+    with open("docs/Data.md", "w", encoding="utf-8") as out:
         out.writelines(
             [
                 "Summaries of the data collected as of "
